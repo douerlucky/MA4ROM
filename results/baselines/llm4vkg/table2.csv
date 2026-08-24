@@ -1,0 +1,14 @@
+scenario,setting,f1,evidence_status,source
+cmt_renamed,adjusted_naming,0.86,reported_only,MA4ROM paper Table 2
+conference_renamed,adjusted_naming,0.92,reported_only,MA4ROM paper Table 2
+sigkdd_renamed,adjusted_naming,0.93,reported_only,MA4ROM paper Table 2
+cmt_structured,restructured,0.55,reported_only,MA4ROM paper Table 2
+conference_structured,restructured,0.59,reported_only,MA4ROM paper Table 2
+sigkdd_structured,restructured,0.71,reported_only,MA4ROM paper Table 2
+sigkdd_mixed,combined,0.72,reported_only,MA4ROM paper Table 2
+conference_nofks,missing_fks,0.51,reported_only,MA4ROM paper Table 2
+cmt_denormalized,denormalized,0.52,reported_only,MA4ROM paper Table 2
+mondial_rel,geographic,0.18,reported_only,MA4ROM paper Table 2
+npd_atomic_tests,petroleum,0.19,reported_only,MA4ROM paper Table 2
+macro_average,all,0.6073,reported_only,MA4ROM paper Table 2
+

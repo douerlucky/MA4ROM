@@ -1,0 +1,2636 @@
+[
+  {
+    "id": "npd_atomic_tests.atomic-isCoreSampleAvailable.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ParcellBAA.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-documentForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-JackUp4LegsFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-transferredBAA.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-lengthCdpTotalKm.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateSyncNPD.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-decimalDegreesEW.qpair",
+    "precision": 0.5301691870040425,
+    "recall": 1.0,
+    "f1": 0.6929549902152642
+  },
+  {
+    "id": "npd_atomic_tests.atomic-areaSize.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SingleWellTemplateFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateStatusFrom.qpair",
+    "precision": 0.1842948717948718,
+    "recall": 0.2222222222222222,
+    "f1": 0.2014892685063513
+  },
+  {
+    "id": "npd_atomic_tests.atomic-baaOperatorCompany.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isCurrentLicenceLicensee.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateLicenceAreaValidFrom.qpair",
+    "precision": 0.2645320197044335,
+    "recall": 0.1902151569138002,
+    "f1": 0.22130098755531552
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mudType.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldYearlyProduction.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-sourcePressure.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateOilSampleTest.qpair",
+    "precision": 0.8396739130434783,
+    "recall": 1.0,
+    "f1": 0.912850812407681
+  },
+  {
+    "id": "npd_atomic_tests.atomic-drillingOperatorCompany.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldOperator.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Jacket12LegsFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreCoreSet.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-sensorLength.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MergerTakeoverTransfer.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreEntryYear.qpair",
+    "precision": 1.0,
+    "recall": 0.9917473416917949,
+    "f1": 0.9958565737051792
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreDrillingDays.qpair",
+    "precision": 0.3482245472199104,
+    "recall": 1.0,
+    "f1": 0.5165675820662997
+  },
+  {
+    "id": "npd_atomic_tests.atomic-lengthPlannedCdpKm.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-quadrantLocation.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-polygonNo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-drillingFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coordinateForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-oilSampleBottomDepth.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SDFITransfer.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-statusForField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-explorationWellboreForField.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licenseeForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isDiscoveryWellbore.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-npdPageURL.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-CondensatePipeline.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-remainingNGL.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-BAAArea.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licenseeForBAA.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-producedOil.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-lengthPlannedBoatKm.qpair",
+    "precision": 0.18758697467297522,
+    "recall": 0.6333798882681564,
+    "f1": 0.28944850863596966
+  },
+  {
+    "id": "npd_atomic_tests.atomic-producedCondensate.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-OilGasPipeline.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateTUFOwnerValidFrom.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-producedNGL.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-remainingOil.qpair",
+    "precision": 0.7095959595959596,
+    "recall": 1.0,
+    "f1": 0.8301329394387001
+  },
+  {
+    "id": "npd_atomic_tests.atomic-utmZone.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateTUFOperatorValidFrom.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coresForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreCore.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isCurrentLicenceOperator.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-pipelineFromFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-GasPipeline.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreLicensingActivity.qpair",
+    "precision": 0.31351542265128324,
+    "recall": 1.0,
+    "f1": 0.47736846822622564
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTBottomHolePressure.qpair",
+    "precision": 0.029548051288561635,
+    "recall": 1.0,
+    "f1": 0.05740004315792719
+  },
+  {
+    "id": "npd_atomic_tests.atomic-currentFieldOperator.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FixedFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateStatusTo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateUpdated.qpair",
+    "precision": 0.4758214096449391,
+    "recall": 0.9789784572619875,
+    "f1": 0.640388991149431
+  },
+  {
+    "id": "npd_atomic_tests.atomic-GroundSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-polygonPointNo.qpair",
+    "precision": 0.011207335710646969,
+    "recall": 0.0009996001599360256,
+    "f1": 0.0018354900341234282
+  },
+  {
+    "id": "npd_atomic_tests.atomic-operatorForField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Well.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-secondsEW.qpair",
+    "precision": 0.9080310880829016,
+    "recall": 0.8490948985189248,
+    "f1": 0.877574596775335
+  },
+  {
+    "id": "npd_atomic_tests.atomic-utmEW.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateLicenceGranted.qpair",
+    "precision": 0.5847554038680318,
+    "recall": 1.0,
+    "f1": 0.737975592246949
+  },
+  {
+    "id": "npd_atomic_tests.atomic-status.qpair",
+    "precision": 0.32075471698113206,
+    "recall": 0.19973824624987416,
+    "f1": 0.24617810103900176
+  },
+  {
+    "id": "npd_atomic_tests.atomic-includedInField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldOwner.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-TUFOwnerShare.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateWellboreCompletion.qpair",
+    "precision": 0.9555645324176933,
+    "recall": 1.0,
+    "f1": 0.9772774220202437
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreDocument.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateProductionStart.qpair",
+    "precision": 0.8639876352395672,
+    "recall": 1.0,
+    "f1": 0.9270315091210614
+  },
+  {
+    "id": "npd_atomic_tests.atomic-discoveryYear.qpair",
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666
+  },
+  {
+    "id": "npd_atomic_tests.atomic-waterDepth.qpair",
+    "precision": 0.9431486880466472,
+    "recall": 1.0,
+    "f1": 0.9707426856714179
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Owner.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SuspendedWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SurveyArea.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-producedWater.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ownerForField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicenceStatus.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateTUFOperatorValidTo.qpair",
+    "precision": 0.575,
+    "recall": 1.0,
+    "f1": 0.7301587301587301
+  },
+  {
+    "id": "npd_atomic_tests.atomic-factMapURL.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licenseeInterest.qpair",
+    "precision": 0.99211494655686,
+    "recall": 1.0,
+    "f1": 0.9960418682381915
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateBaaAreaValidTo.qpair",
+    "precision": 0.17629629629629628,
+    "recall": 0.9939759036144579,
+    "f1": 0.299476088432002
+  },
+  {
+    "id": "npd_atomic_tests.atomic-transferredInterest.qpair",
+    "precision": 0.8713126843657817,
+    "recall": 1.0,
+    "f1": 0.931231527093596
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldStatus.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SeismicSurveyCoordinate.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreBottomHoleTemperature.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-InitialWellbore.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreSeismicLocation.qpair",
+    "precision": 0.9714111922141119,
+    "recall": 1.0,
+    "f1": 0.9854983029929033
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coresTotalNo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-fieldLicensee.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateLicenceValidTo.qpair",
+    "precision": 0.9166666666666666,
+    "recall": 0.02642113690952762,
+    "f1": 0.051361867704280154
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateSurveyPlannedStart.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicenceArea.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isReentryWellbore.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FSUFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Jacket8LegsFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-degreesNS.qpair",
+    "precision": 1.0,
+    "recall": 0.998299506308283,
+    "f1": 0.9991490296192593
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreReentryExplorationActivity.qpair",
+    "precision": 0.08495821727019498,
+    "recall": 1.0,
+    "f1": 0.15661103979460844
+  },
+  {
+    "id": "npd_atomic_tests.atomic-registeredInCountry.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coreNo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-reclassedFromWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mudViscosity.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isMarketAvailable.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DevelopmentWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-casingType.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreKellyBushElevation.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-geodeticDatum.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-companyShare.qpair",
+    "precision": 0.7908673649523361,
+    "recall": 1.0,
+    "f1": 0.8832227114411514
+  },
+  {
+    "id": "npd_atomic_tests.atomic-belongsToFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SeismicSurveyProgress.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellborePlannedContent.qpair",
+    "precision": 0.06338443396226415,
+    "recall": 1.0,
+    "f1": 0.11921264208483502
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateOilSampleReceived.qpair",
+    "precision": 0.4781073446327684,
+    "recall": 1.0,
+    "f1": 0.6469182990922121
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coreForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Discovery.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-JunkedWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Condeep3ShaftsFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreForDiscovery.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-remainingCondensate.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-pipelineOperator.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-sourceNumber.qpair",
+    "precision": 0.28077797423591816,
+    "recall": 1.0,
+    "f1": 0.43844909872598903
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SidetrackWellbore.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicenceTransfer.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-shallowWellboreForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-designLifetime.qpair",
+    "precision": 0.3144899285250162,
+    "recall": 1.0,
+    "f1": 0.4784972812654473
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateTUFOwnerValidTo.qpair",
+    "precision": 0.9487412799514711,
+    "recall": 1.0,
+    "f1": 0.9736964980544748
+  },
+  {
+    "id": "npd_atomic_tests.atomic-productionFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTOilDensity.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateBaaValidFrom.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SeismicAreaBAA.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreStratum.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldReserve.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ExplorationWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-codeEW.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-developmentWellboreForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-LithostratigraphicUnit.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateSurveyActualStart.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-currentFieldOwner.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateWDSSQC.qpair",
+    "precision": 0.2402930402930403,
+    "recall": 1.0,
+    "f1": 0.38747784997046664
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isActive.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateStatusValidTo.qpair",
+    "precision": 0.3221595965588846,
+    "recall": 0.7744171392564587,
+    "f1": 0.4550268212021565
+  },
+  {
+    "id": "npd_atomic_tests.atomic-originalAreaSize.qpair",
+    "precision": 0.08454891758803308,
+    "recall": 1.0,
+    "f1": 0.15591536023301636
+  },
+  {
+    "id": "npd_atomic_tests.atomic-producedGas.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-JackUp3LegsFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licenceOperatorCompany.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-remainingGas.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ReEntryWellbore.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-resourcesIncludedInDiscovery.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-facilityType.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Operator.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-pressReleaseURL.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WildcatWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellType.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-minutesEW.qpair",
+    "precision": 1.0,
+    "recall": 0.998134942402633,
+    "f1": 0.9990666007796628
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SeabedSeismicSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreHoleDiameter.qpair",
+    "precision": 0.5011921793037672,
+    "recall": 1.0,
+    "f1": 0.667725540025413
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateLicenceAreaValidTo.qpair",
+    "precision": 0.2171645844649647,
+    "recall": 0.4729326513213981,
+    "f1": 0.2976514536740448
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTDepthFrom.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreOilSample.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-documentFormat.qpair",
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1": 0.5
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellOperator.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-developmentWellboreForField.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Point.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTTestNo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-pipelineToFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coresTotalLength.qpair",
+    "precision": 0.8735872750104646,
+    "recall": 1.0,
+    "f1": 0.9325290437890974
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreFormationHc.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateBaaLicenseeValidFrom.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTChokeSize.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-sourceSize.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-idNPD.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-reservesForField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-casingDepth.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-documentType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MultiFieldWellbore.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MainArea.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isSamplingPerformed.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-BAATransfer.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-TlpConcreteFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-OilPipeline.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateBaaAreaValidFrom.qpair",
+    "precision": 0.6959183673469388,
+    "recall": 0.993103448275862,
+    "f1": 0.8183659014207741
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateFieldOwnerTo.qpair",
+    "precision": 0.06523422377080913,
+    "recall": 1.0,
+    "f1": 0.12247864801017624
+  },
+  {
+    "id": "npd_atomic_tests.atomic-UnitizedBAA.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-LandfallFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-AwardArea.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MultiWellTemplateFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Facility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-productionForField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coordinateForSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldInvestment.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-currentResponsibleCompany.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-reservesForCompany.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Licensee.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-belongsToWell.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreWaterDepth.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreStratumBottomDepth.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-shortName.qpair",
+    "precision": 0.035452485672397706,
+    "recall": 1.0,
+    "f1": 0.068477281503411
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreFormationTD.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreFinalVerticalDepth.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-documentURL.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Condeep4ShaftsFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-oilSampleTestForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateBaaValidTo.qpair",
+    "precision": 0.24489795918367346,
+    "recall": 1.0,
+    "f1": 0.39344262295081966
+  },
+  {
+    "id": "npd_atomic_tests.atomic-blockLocation.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-currentAreaSize.qpair",
+    "precision": 0.17143933685003768,
+    "recall": 1.0,
+    "f1": 0.2926986169186233
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellborePurpose.qpair",
+    "precision": 0.050525908240304576,
+    "recall": 1.0,
+    "f1": 0.09619164619164619
+  },
+  {
+    "id": "npd_atomic_tests.atomic-discoveryWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Pipeline.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FacilityPoint.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-messageForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTFinalFlowPressure.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-oilSampleTestNumber.qpair",
+    "precision": 0.4149443561208267,
+    "recall": 1.0,
+    "f1": 0.5865168539325842
+  },
+  {
+    "id": "npd_atomic_tests.atomic-productionForDiscovery.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreNamePart5.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-corePhotoURL.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-OtherSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-BAA.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-member.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-sensorType.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coreIntervalBottom.qpair",
+    "precision": 0.0,
+    "recall": 0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreFormationHcLevel3.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-TlpSteelFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Agent.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SemisubConcreteFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Area.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateFieldOwnerFrom.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isShallowDrillingPerformed.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreCorePhoto.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-surveySubType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateIncludedInField.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mainAreaLocation.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreAgeHcLevel2.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-reservesForDiscovery.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreMaxInclation.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-producedOilEquivalents.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateSurveyProgress.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-recoverableOilEquivalents.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-NCSYearlyProduction.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreCompletionYear.qpair",
+    "precision": 0.6848913043478261,
+    "recall": 1.0,
+    "f1": 0.8129798077543384
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Field.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateMudMeasured.qpair",
+    "precision": 0.3719342030629609,
+    "recall": 1.0,
+    "f1": 0.5422041410332739
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldMonthlyProduction.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ShallowWellbore.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-remainingOilEquivalents.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SuspReenteredLaterWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-pipelineDimension.qpair",
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreFormationHcLevel1.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-JacketTripodFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mudMeasuredDepth.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-minutesNS.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-oilSampleFluidType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-CompanyReserve.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateOperatorValidTo.qpair",
+    "precision": 0.378495399603103,
+    "recall": 1.0,
+    "f1": 0.54914278235833
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mudWeight.qpair",
+    "precision": 0.5006502655250894,
+    "recall": 1.0,
+    "f1": 0.6672444300003612
+  },
+  {
+    "id": "npd_atomic_tests.atomic-AppraisalWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isStratigraphical.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-documentName.qpair",
+    "precision": 0.22235201154361495,
+    "recall": 1.0,
+    "f1": 0.3638101127069339
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licenseeForField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreAgeHc.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MoveableFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-NCSMonthlyProduction.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-coreIntervalTop.qpair",
+    "precision": 0.0,
+    "recall": 0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreCasingAndLeakoffTest.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SeismicSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-investmentForField.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DiscoveryArea.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isMultilateral.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Wellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Reserve.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateResourceEstimate.qpair",
+    "precision": 0.7945823927765236,
+    "recall": 1.0,
+    "f1": 0.8855345911949685
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreNamePart3.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-LoadingSystemFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Jacket4LegsFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licenceTransferCompany.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateTransferValidFrom.qpair",
+    "precision": 0.48889910942007775,
+    "recall": 1.0,
+    "f1": 0.6567256388654872
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ReClassToTestWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-documentSize.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-stratigraphicLevel.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateStatusValidFrom.qpair",
+    "precision": 0.022915340547422024,
+    "recall": 0.1323251417769376,
+    "f1": 0.03906552777217976
+  },
+  {
+    "id": "npd_atomic_tests.atomic-sourceType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-country.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-RegularSeismicSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-recoverableGas.qpair",
+    "precision": 0.735658042744657,
+    "recall": 1.0,
+    "f1": 0.847699287103046
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateSurveyActualCompleted.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-factPageURL.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-codeNS.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-pipelineMainGrouping.qpair",
+    "precision": 0.20068027210884354,
+    "recall": 1.0,
+    "f1": 0.3342776203966005
+  },
+  {
+    "id": "npd_atomic_tests.atomic-currentStatus.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DiscoveryReserve.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ReClassToDevWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licenceLicensee.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-VesselFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreAgeTD.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-explorationWellboreForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FPSOFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ElectromagneticSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-pipelineMedium.qpair",
+    "precision": 0.020450606585788563,
+    "recall": 1.0,
+    "f1": 0.04008152173913044
+  },
+  {
+    "id": "npd_atomic_tests.atomic-hydrocarbonType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-containsWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-reportingCompany.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SubseaStructureFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-name.qpair",
+    "precision": 0.9810453789498693,
+    "recall": 0.7256528966493111,
+    "f1": 0.8342405112344341
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isTurnAreaIncluded.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mapNo.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTFinalShutInPressure.qpair",
+    "precision": 0.05440823729011876,
+    "recall": 1.0,
+    "f1": 0.1032014647949842
+  },
+  {
+    "id": "npd_atomic_tests.atomic-corePhotoForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-oilSampleTopDepth.qpair",
+    "precision": 0.1001360544217687,
+    "recall": 1.0,
+    "f1": 0.1820430373485036
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DorisFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ZValueTo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreHoleDepth.qpair",
+    "precision": 0.3751249464515208,
+    "recall": 1.0,
+    "f1": 0.5455867082035306
+  },
+  {
+    "id": "npd_atomic_tests.atomic-TUFacility.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Block.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreNamePart1.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateInitialStatusTo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreDrillStemTest.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreStratumTopDepth.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-degreesEW.qpair",
+    "precision": 1.0,
+    "recall": 0.9943499725726824,
+    "f1": 0.9971669829743928
+  },
+  {
+    "id": "npd_atomic_tests.atomic-TUFOperator.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateWellboreEntry.qpair",
+    "precision": 0.9357448833888624,
+    "recall": 1.0,
+    "f1": 0.966805999508237
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreContent.qpair",
+    "precision": 0.9321387723980176,
+    "recall": 1.0,
+    "f1": 0.9648776637726914
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isGeometryOfFeature.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-surveyType.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreCoordinate.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-casingDiameter.qpair",
+    "precision": 0.5932456259324562,
+    "recall": 1.0,
+    "f1": 0.7447007746658721
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateFieldOperatorTo.qpair",
+    "precision": 0.4169435215946844,
+    "recall": 1.0,
+    "f1": 0.5885111371629543
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mudTestForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-PAWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ZValueFrom.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreAgeHcLevel3.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-statusForSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreTotalDepth.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateOperatorValidFrom.qpair",
+    "precision": 0.5154588040782585,
+    "recall": 1.0,
+    "f1": 0.680267655829515
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTGasProducedRate.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-facilityFunction.qpair",
+    "precision": 0.1548856548856549,
+    "recall": 1.0,
+    "f1": 0.2682268226822682
+  },
+  {
+    "id": "npd_atomic_tests.atomic-transferDirection.qpair",
+    "precision": 0.9971515982698597,
+    "recall": 1.0,
+    "f1": 0.9985737678939306
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreForField.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SlidingScaleBAA.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-productionYear.qpair",
+    "precision": 0.0042656916514320535,
+    "recall": 0.6066219944816713,
+    "f1": 0.00847181056739033
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicenceWorkObligation.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-corePhotoTitle.qpair",
+    "precision": 0.20079415711551576,
+    "recall": 1.0,
+    "f1": 0.33443559984977417
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreFormationHcLevel2.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-taskForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateApproved.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-taskID.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-lengthBoatTotalKm.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-utmNS.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-TransportationPipeline.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-secondsNS.qpair",
+    "precision": 1.0,
+    "recall": 0.83960504662644,
+    "f1": 0.9128101145038168
+  },
+  {
+    "id": "npd_atomic_tests.atomic-lastOperatorCompany.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-CondeepMonoshaftFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ChangeOfCompanyNameTransfer.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SiteSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ConcreteStructureFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreNamePart4.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-licensingActivityName.qpair",
+    "precision": 0.7913825476825773,
+    "recall": 1.0,
+    "f1": 0.8835438848127103
+  },
+  {
+    "id": "npd_atomic_tests.atomic-inLithostratigraphicUnit.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isGeotechnicalMeasurement.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-blockId.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-transferredLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ObservationWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isFormerLicenceLicensee.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-recoverableOil.qpair",
+    "precision": 0.6617647058823529,
+    "recall": 1.0,
+    "f1": 0.7964601769911505
+  },
+  {
+    "id": "npd_atomic_tests.atomic-TUFOwner.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateBaaLicenseeValidTo.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicenceLicensee.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreAgeHcLevel1.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-recoverableNGL.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-taskType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTDepthTo.qpair",
+    "precision": 0.1801128507903292,
+    "recall": 1.0,
+    "f1": 0.3052468256230012
+  },
+  {
+    "id": "npd_atomic_tests.atomic-productionMonth.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreWellType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateLicenseeValidTo.qpair",
+    "precision": 0.11533832000687817,
+    "recall": 0.5385354603113588,
+    "f1": 0.18998704987440387
+  },
+  {
+    "id": "npd_atomic_tests.atomic-reservesResourceClass.qpair",
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1": 0.5
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreType.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-OnshoreFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-LOTMudDensity.qpair",
+    "precision": 0.39329291114604387,
+    "recall": 1.0,
+    "f1": 0.5645516574437222
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Survey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-InjectionWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Transfer.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellborePoint.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-geochronologicEra.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Jacket6LegsFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MultilateralWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-LOTForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateLicenseeValidFrom.qpair",
+    "precision": 0.7061112476447939,
+    "recall": 1.0,
+    "f1": 0.8277434998679567
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreParent.qpair",
+    "precision": 0.206280038449215,
+    "recall": 1.0,
+    "f1": 0.3420101997450064
+  },
+  {
+    "id": "npd_atomic_tests.atomic-sensorNumbers.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellborePlotSymbol.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-drillPermit.qpair",
+    "precision": 0.5035563014464957,
+    "recall": 1.0,
+    "f1": 0.6698203465504412
+  },
+  {
+    "id": "npd_atomic_tests.atomic-provinceLocation.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Company.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-recoverableCondensate.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateUpdatedMax.qpair",
+    "precision": 0.45361639361534006,
+    "recall": 1.0,
+    "f1": 0.6241211857650214
+  },
+  {
+    "id": "npd_atomic_tests.atomic-statusForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-operatorForLicence.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicenceAreaPerBlock.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-areaSize3DKm2.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellboreNamePart2.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTGasOilRelation.qpair",
+    "precision": 0.6564574925139955,
+    "recall": 1.0,
+    "f1": 0.7926040909358851
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isSurfaceFacility.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTOilProducedRate.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-DSTGasDensity.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-Quadrant.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateFieldLicenseeTo.qpair",
+    "precision": 0.49727371864776443,
+    "recall": 1.0,
+    "f1": 0.6642388929351783
+  },
+  {
+    "id": "npd_atomic_tests.atomic-mudYieldPoint.qpair",
+    "precision": 0.3333413612061076,
+    "recall": 1.0,
+    "f1": 0.5000090313024944
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateSurveyPlannedCompleted.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FieldArea.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-stratigraphicParent.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-decimalDegreesNS.qpair",
+    "precision": 0.17095435684647303,
+    "recall": 0.07370675975880672,
+    "f1": 0.10300363118290767
+  },
+  {
+    "id": "npd_atomic_tests.atomic-ProductionLicenceOperator.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MopustorFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-isFormerLicenceOperator.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateTaskExpiry.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-FeederPipeline.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-taskForCompany.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-oilSampleTestType.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-BlowoutWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-baaLicensee.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-RouteSurvey.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-investmentNOK.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SurveyMultilineArea.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-baaTransferCompany.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SemisubSteelFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateFieldLicenseeFrom.qpair",
+    "precision": 0.9841753894337757,
+    "recall": 1.0,
+    "f1": 0.9920245908448949
+  },
+  {
+    "id": "npd_atomic_tests.atomic-SDFI.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-dateFieldOperatorFrom.qpair",
+    "precision": 0.7760532150776053,
+    "recall": 1.0,
+    "f1": 0.8739076154806492
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreStratigraphicCoreSet.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-WellboreDrillingMudSample.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-wellborePlannedPurpose.qpair",
+    "precision": 0.6527311931001437,
+    "recall": 1.0,
+    "f1": 0.7898818583750091
+  },
+  {
+    "id": "npd_atomic_tests.atomic-stratumForWellbore.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "npd_atomic_tests.atomic-MonotowerFacility.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scope": "paper_table_2_ma4rom",
+  "result_policy": "canonical_reported_results_only",
+  "execution_policy": {
+    "runs_per_configuration": 1,
+    "aggregation_claim": "none",
+    "notes": "These are the originally reported single-run artefacts; they are not mean-plus-standard-deviation results."
+  },
+  "deepseek_v4_flash": {
+    "git_commit": "36382fe941480958f4186543998fc195f39f4862",
+    "source_surface_sha256": "9696f7ed764e87e603955fd61ab10d524aa532ea69653c26654b0e0a3932158d",
+    "model": "deepseek-v4-flash"
+  },
+  "gpt_4o": {
+    "source_surface_sha256": "1a8278d1adce9408dea47cf63647dc18ec9243849d17f9d9fd39a0f8468f5438",
+    "model": "gpt-4o",
+    "runs_per_configuration": 1
+  },
+  "llm4vkg_baseline": {
+    "evidence": "reported_only",
+    "notes": "The audited local LLM4VKG checkout did not contain original baseline run artefacts. See results/baselines/llm4vkg."
+  },
+  "current_public_source": {
+    "relationship": "post-paper implementation corrections",
+    "upstream_source_surface_sha256": "ba5fac9adf75a2f345e36677af8949d7063f031fb67d68a81494b3b265ad0eae",
+    "generated_the_packaged_results": false
+  },
+  "excluded": [
+    "diagnostic repair runs",
+    "checkpoint continuations",
+    "failed or budget-paused runs",
+    "offline counterfactual replays",
+    "non-canonical reruns"
+  ]
+}

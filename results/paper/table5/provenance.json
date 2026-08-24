@@ -1,0 +1,7 @@
+{
+  "table": 5,
+  "title": "Impact of IND completion and logic rules",
+  "scope": "reported summary",
+  "warning": "The original per-dataset evaluation directories for the two ablation rows were not found in the audited archives. These values are transcribed from the paper and are not presented as locally reproducible raw artefacts."
+}
+

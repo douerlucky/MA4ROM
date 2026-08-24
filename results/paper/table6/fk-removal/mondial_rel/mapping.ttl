@@ -1,0 +1,878 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mondialrel-100: <http://www.semwebtech.org/mondial/10/meta#> .
+@base <http://example.com/> .
+
+# === economy (SH) ===
+<#economyMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"gdp\" , \"agriculture\" , \"service\" , \"industry\" , \"inflation\" , \"unemployment\" FROM \"economy\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/country/{country}" ; rr:class mondialrel-100:Country ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:gdpTotal ;
+        rr:objectMap [ rr:column "gdp" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:gdpAgri ;
+        rr:objectMap [ rr:column "agriculture" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:gdpServ ;
+        rr:objectMap [ rr:column "service" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:gdpInd ;
+        rr:objectMap [ rr:column "industry" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:inflation ;
+        rr:objectMap [ rr:column "inflation" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:unemployment ;
+        rr:objectMap [ rr:column "unemployment" ; rr:datatype xsd:decimal ]
+    ] .
+
+# === politics (SH) ===
+<#politicsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"independence\" , \"wasdependent\" , \"dependent\" , \"government\" FROM \"politics\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/country/{country}" ; rr:class mondialrel-100:PoliticalBody ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:independenceDate ;
+        rr:objectMap [ rr:column "independence" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:dependentOf ;
+        rr:objectMap [ rr:template "http://example.com/country/{dependent}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:government ;
+        rr:objectMap [ rr:column "government" ; rr:datatype xsd:string ]
+    ] .
+
+# === population (SH) ===
+<#populationMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"population_growth\" , \"infant_mortality\" FROM \"population\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/country/{country}" ; rr:class mondialrel-100:PopulationCount ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:populationGrowth ;
+        rr:objectMap [ rr:column "population_growth" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:infantMortality ;
+        rr:objectMap [ rr:column "infant_mortality" ; rr:datatype xsd:decimal ]
+    ] .
+
+# === mergeswith (SR) ===
+<#mergeswithMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"sea1\" , \"sea2\" FROM \"mergeswith\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/sea/{sea1}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:mergesWith ;
+        rr:objectMap [ rr:template "http://example.com/sea/{sea2}" ]
+    ] .
+
+# === mountainonisland (SR) ===
+<#mountainonislandMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"mountain\" , \"island\" FROM \"mountainonisland\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/mountain/{mountain}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:locatedOnIsland ;
+        rr:objectMap [ rr:template "http://example.com/island/{island}" ]
+    ] .
+
+# === riverthrough (SR) ===
+<#riverthroughMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"river\" , \"lake\" FROM \"riverthrough\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/river/{river}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:flowsThrough ;
+        rr:objectMap [ rr:template "http://example.com/lake/{lake}" ]
+    ] .
+
+# === airport (SE) ===
+<#airportMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"iatacode\" , \"name\" , \"country\" , \"city\" , \"province\" , \"island\" , \"latitude\" , \"longitude\" , \"elevation\" , \"gmtoffset\" FROM \"airport\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/airport/{iatacode}" ; rr:class mondialrel-100:Location ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:isCapitalOf ;
+        rr:objectMap [ rr:template "http://example.com/island/{island}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:latitude ;
+        rr:objectMap [ rr:column "latitude" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:longitude ;
+        rr:objectMap [ rr:column "longitude" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:elevation ;
+        rr:objectMap [ rr:column "elevation" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:longitude ;
+        rr:objectMap [ rr:column "gmtoffset" ; rr:datatype xsd:decimal ]
+    ] .
+
+# === borders (SE) ===
+<#bordersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country1\" , \"country2\" , \"length\" FROM \"borders\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/borders/{country1}__{country2}" ; rr:class mondialrel-100:Border ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:length ;
+        rr:objectMap [ rr:column "length" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:bordering ;
+        rr:objectMap [ rr:template "http://example.com/country/{country1}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:bordering ;
+        rr:objectMap [ rr:template "http://example.com/country/{country2}" ]
+    ] .
+
+# === city (SE) ===
+<#cityMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"country\" , \"province\" , \"population\" , \"latitude\" , \"longitude\" , \"elevation\" FROM \"city\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/city/{name}__{country}__{province}" ; rr:class mondialrel-100:City ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:population ;
+        rr:objectMap [ rr:column "population" ; rr:datatype xsd:nonNegativeInteger ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:latitude ;
+        rr:objectMap [ rr:column "latitude" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:longitude ;
+        rr:objectMap [ rr:column "longitude" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:elevation ;
+        rr:objectMap [ rr:column "elevation" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === cityothername (SE) ===
+<#cityothernameMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"city\" , \"country\" , \"province\" , \"othername\" FROM \"cityothername\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/cityothername/{country}__{province}__{city}__{othername}" ; rr:class mondialrel-100:City ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:othername ;
+        rr:objectMap [ rr:column "othername" ; rr:datatype xsd:string ]
+    ] .
+
+# === continent (SE) ===
+<#continentMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"area\" FROM \"continent\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/continent/{name}" ; rr:class mondialrel-100:Continent ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:area ;
+        rr:objectMap [ rr:column "area" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === country (SE) ===
+<#countryMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"code\" , \"capital\" , \"province\" , \"area\" , \"population\" FROM \"country\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/country/{code}" ; rr:class mondialrel-100:Country ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:carCode ;
+        rr:objectMap [ rr:column "province" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:area ;
+        rr:objectMap [ rr:column "area" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:population ;
+        rr:objectMap [ rr:column "population" ; rr:datatype xsd:nonNegativeInteger ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:carCode ;
+        rr:objectMap [ rr:column "code" ; rr:datatype xsd:string ]
+    ] .
+
+# === countryothername (SE) ===
+# SKIP: countryothername (SE value_attr) SQL/XSD 类型不兼容
+
+# === desert (SE) ===
+<#desertMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"area\" , \"coordinates\" FROM \"desert\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/desert/{name}" ; rr:class mondialrel-100:Desert ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:area ;
+        rr:objectMap [ rr:column "area" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === encompasses (SE) ===
+<#encompassesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"continent\" , \"percentage\" FROM \"encompasses\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/encompasses/{country}__{continent}" ; rr:class mondialrel-100:Encompassed ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:percent ;
+        rr:objectMap [ rr:column "percentage" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:encompassedBy ;
+        rr:objectMap [ rr:template "http://example.com/continent/{continent}" ]
+    ] .
+
+# === ethnicgroup (SE) ===
+<#ethnicgroupMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"name\" , \"percentage\" FROM \"ethnicgroup\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ethnicgroup/{name}__{country}" ; rr:class mondialrel-100:EthnicGroup ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:percent ;
+        rr:objectMap [ rr:column "percentage" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === geo_desert (SE) ===
+<#geo_desertMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"desert\" , \"country\" , \"province\" FROM \"geo_desert\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_desert/{province}__{country}__{desert}" ; rr:class mondialrel-100:Desert ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasBorder ;
+        rr:objectMap [ rr:template "http://example.com/desert/{desert}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === geo_estuary (SE) ===
+<#geo_estuaryMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"river\" , \"country\" , \"province\" FROM \"geo_estuary\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_estuary/{province}__{country}__{river}" ; rr:class mondialrel-100:Estuary ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasBorder ;
+        rr:objectMap [ rr:template "http://example.com/river/{river}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === geo_island (SE) ===
+<#geo_islandMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"island\" , \"country\" , \"province\" FROM \"geo_island\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_island/{province}__{country}__{island}" ; rr:class mondialrel-100:Island ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:belongsToIslands ;
+        rr:objectMap [ rr:template "http://example.com/island/{island}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === geo_lake (SE) ===
+<#geo_lakeMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"lake\" , \"country\" , \"province\" FROM \"geo_lake\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_lake/{province}__{country}__{lake}" ; rr:class mondialrel-100:Lake ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === geo_mountain (SE) ===
+<#geo_mountainMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"mountain\" , \"country\" , \"province\" FROM \"geo_mountain\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_mountain/{province}__{country}__{mountain}" ; rr:class mondialrel-100:Mountain ] .
+
+# === geo_river (SE) ===
+<#geo_riverMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"river\" , \"country\" , \"province\" FROM \"geo_river\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_river/{province}__{country}__{river}" ; rr:class mondialrel-100:River ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasBorder ;
+        rr:objectMap [ rr:template "http://example.com/river/{river}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasSource ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === geo_sea (SE) ===
+<#geo_seaMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"sea\" , \"country\" , \"province\" FROM \"geo_sea\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_sea/{province}__{country}__{sea}" ; rr:class mondialrel-100:Sea ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:mergesWith ;
+        rr:objectMap [ rr:template "http://example.com/sea/{sea}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === geo_source (SE) ===
+<#geo_sourceMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"river\" , \"country\" , \"province\" FROM \"geo_source\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/geo_source/{province}__{country}__{river}" ; rr:class mondialrel-100:Source ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasBorder ;
+        rr:objectMap [ rr:template "http://example.com/river/{river}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === island (SE) ===
+<#islandMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"islands\" , \"area\" , \"elevation\" , \"type\" , \"coordinates\" FROM \"island\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/island/{name}" ; rr:class mondialrel-100:Island ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:area ;
+        rr:objectMap [ rr:column "area" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:elevation ;
+        rr:objectMap [ rr:column "elevation" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === islandin (SE) ===
+<#islandinMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"island\" , \"sea\" , \"lake\" , \"river\" FROM \"islandin\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/islandin/{island}__{sea}__{lake}__{river}" ; rr:class mondialrel-100:Island ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:belongsToIslands ;
+        rr:objectMap [ rr:template "http://example.com/island/{island}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:locatedInWater ;
+        rr:objectMap [ rr:template "http://example.com/sea/{sea}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:locatedInWater ;
+        rr:objectMap [ rr:template "http://example.com/lake/{lake}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:isProvinceOf ;
+        rr:objectMap [ rr:template "http://example.com/river/{river}" ]
+    ] .
+
+# === ismember (SE) ===
+<#ismemberMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" , \"type\" FROM \"ismember\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ; rr:class mondialrel-100:Membership ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:ofMember ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:inOrganization ;
+        rr:objectMap [ rr:template "http://example.com/organization/{organization}" ]
+    ] .
+
+# === lake (SE) ===
+<#lakeMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"area\" , \"depth\" , \"elevation\" , \"type\" , \"river\" , \"coordinates\" FROM \"lake\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ; rr:class mondialrel-100:Lake ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:area ;
+        rr:objectMap [ rr:column "area" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:depth ;
+        rr:objectMap [ rr:column "depth" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:elevation ;
+        rr:objectMap [ rr:column "elevation" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasBorder ;
+        rr:objectMap [ rr:template "http://example.com/river/{river}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === language (SE) ===
+<#languageMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"name\" , \"percentage\" FROM \"language\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/language/{name}__{country}" ; rr:class mondialrel-100:Language ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:percent ;
+        rr:objectMap [ rr:column "percentage" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === located (SE) ===
+<#locatedMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"city\" , \"province\" , \"country\" , \"river\" , \"lake\" , \"sea\" FROM \"located\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/located/{country}__{river}__{lake}__{sea}" ; rr:class mondialrel-100:Location ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasBorder ;
+        rr:objectMap [ rr:template "http://example.com/river/{river}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:haMember ;
+        rr:objectMap [ rr:template "http://example.com/lake/{lake}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate <http://www.semwebtech.org/mondial/10/meta#hasSource-> ;
+        rr:objectMap [ rr:template "http://example.com/sea/{sea}" ]
+    ] .
+
+# === locatedon (SE) ===
+<#locatedonMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"city\" , \"province\" , \"country\" , \"island\" FROM \"locatedon\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/locatedon/{city}__{province}__{country}__{island}" ; rr:class mondialrel-100:Location ] .
+
+# === mountain (SE) ===
+<#mountainMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"mountains\" , \"elevation\" , \"type\" , \"coordinates\" FROM \"mountain\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/mountain/{name}" ; rr:class mondialrel-100:Mountain ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:elevation ;
+        rr:objectMap [ rr:column "elevation" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === organization (SE) ===
+<#organizationMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"abbreviation\" , \"name\" , \"city\" , \"country\" , \"province\" , \"established\" FROM \"organization\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/organization/{abbreviation}" ; rr:class mondialrel-100:Organization ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:abbrev ;
+        rr:objectMap [ rr:column "province" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:established ;
+        rr:objectMap [ rr:column "established" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:abbrev ;
+        rr:objectMap [ rr:column "abbreviation" ; rr:datatype xsd:string ]
+    ] .
+
+# === province (SE) ===
+<#provinceMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"country\" , \"population\" , \"area\" , \"capital\" , \"capprov\" FROM \"province\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/province/{name}__{country}" ; rr:class mondialrel-100:Province ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:population ;
+        rr:objectMap [ rr:column "population" ; rr:datatype xsd:nonNegativeInteger ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:area ;
+        rr:objectMap [ rr:column "area" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] .
+
+# === provinceothername (SE) ===
+<#provinceothernameMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"province\" , \"country\" , \"othername\" FROM \"provinceothername\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/provinceothername/{country}__{province}__{othername}" ; rr:class mondialrel-100:Province ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:othername ;
+        rr:objectMap [ rr:column "othername" ; rr:datatype xsd:string ]
+    ] .
+
+# === religion (SE) ===
+<#religionMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"name\" , \"percentage\" FROM \"religion\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/religion/{name}__{country}" ; rr:class mondialrel-100:Religion ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:percent ;
+        rr:objectMap [ rr:column "percentage" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:cityIn ;
+        rr:objectMap [ rr:template "http://example.com/country/{country}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === river (SE) ===
+<#riverMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"river\" , \"lake\" , \"sea\" , \"length\" , \"source\" , \"mountains\" , \"sourceelevation\" , \"estuary\" FROM \"river\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/river/{name}" ; rr:class mondialrel-100:River ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:flowsThrough ;
+        rr:objectMap [ rr:template "http://example.com/lake/{lake}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:hasSource ;
+        rr:objectMap [ rr:template "http://example.com/sea/{sea}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:length ;
+        rr:objectMap [ rr:column "length" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:elevation ;
+        rr:objectMap [ rr:column "sourceelevation" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === sea (SE) ===
+<#seaMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" , \"depth\" FROM \"sea\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/sea/{name}" ; rr:class mondialrel-100:Sea ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:depth ;
+        rr:objectMap [ rr:column "depth" ; rr:datatype xsd:decimal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate mondialrel-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === island (Type Assertions) ===
+<#island_type_atoll_Island_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"island\" WHERE \"type\" = 'atoll'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/island/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Island ]
+    ] .
+
+<#island_type_coral_Island_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"island\" WHERE \"type\" = 'coral'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/island/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Island ]
+    ] .
+
+<#island_type_volcanic_Island_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"island\" WHERE \"type\" = 'volcanic'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/island/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Island ]
+    ] .
+
+<#island_type_lime_Island_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"island\" WHERE \"type\" = 'lime'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/island/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Island ]
+    ] .
+
+# === ismember (Type Assertions) ===
+<#ismember_type_List_A_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'List A'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_List_B_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'List B'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_List_C_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'List C'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_member_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'member'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_candidate_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'candidate'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_dialogue_member_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'dialogue member'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_associate_member_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'associate member'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_dialogue_partner_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'dialogue partner'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_associated_member_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'associated member'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_cooperating_state_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'cooperating state'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_associate_observer_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'associate observer'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_national_committee_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'national committee'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_candidate_countries_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'candidate countries'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_compliant_countries_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'compliant countries'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_nonpermanent_member_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'nonpermanent member'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_correspondent_member_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'correspondent member'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_having_direct_member_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'having direct member'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_National_Olympic_Committee_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'National Olympic Committee'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_accepting_compulsory_jurisdiction_with_reservations_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'accepting compulsory jurisdiction with reservations'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+<#ismember_type_accepting_compulsory_jurisdiction_without_reservations_Membership_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"country\" , \"organization\" FROM \"ismember\" WHERE \"type\" = 'accepting compulsory jurisdiction without reservations'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/ismember/{country}__{organization}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Membership ]
+    ] .
+
+# === lake (Type Assertions) ===
+<#lake_type_dam_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'dam'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+<#lake_type_naturaldam_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'naturaldam'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+<#lake_type_acid_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'acid'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+<#lake_type_salt_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'salt'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+<#lake_type_crater_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'crater'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+<#lake_type_impact_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'impact'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+<#lake_type_asphalt_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'asphalt'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+<#lake_type_caldera_Lake_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"lake\" WHERE \"type\" = 'caldera'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/lake/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Lake ]
+    ] .
+
+# === mountain (Type Assertions) ===
+<#mountain_type_volcano_Volcano_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"name\" FROM \"mountain\" WHERE \"type\" = 'volcano'" ] ;
+    rr:subjectMap [ rr:template "http://example.com/mountain/{name}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant mondialrel-100:Volcano ]
+    ] .

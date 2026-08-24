@@ -1,0 +1,302 @@
+[
+  {
+    "id": "mondial_rel.115b-mvd-ref-located-cities-same-river-diff-country.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.003-simple-river-count.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.122a-mvd-locatedonisland-cities-elev-not-null.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.114c-city-cityIn-country+province.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.001-simple-country-count.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.136-rivers-through-lakes.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.222-org-abbrev-headq.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.111-simple-country-population.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.131-rivers-in-countries.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.123-mvd-locatedonisland-pairs.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.184-Membership.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.117-city-isCapitalOf-and-locatedIn.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.212-org-abbrev.qpair",
+    "precision": 0.4097560975609756,
+    "recall": 1.0,
+    "f1": 0.5813148788927336
+  },
+  {
+    "id": "mondial_rel.004-simple-orghq-count.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.177-sea-merges-with-symmetric.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.223-functional-ref-country-capital.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.221-functional-ref-country-dependentOf.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.124a-mvd-locatedonisland-cities+mountains-elev-not-null.qpair",
+    "precision": 1.0,
+    "recall": 0.8062015503875969,
+    "f1": 0.8927038626609441
+  },
+  {
+    "id": "mondial_rel.121-mvd-locatedonisland-mountains.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.114-city-country.qpair",
+    "precision": 1.0,
+    "recall": 0.9777777777777777,
+    "f1": 0.9887640449438202
+  },
+  {
+    "id": "mondial_rel.211-country-code.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.152a-cities-onisland-opt-atwater.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.215-mvd-literal-othername.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.113-mvd-literal-othername.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.142-europ-countries-names-percent.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.127-volcanoes.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.171-countries-Borders_C1-B-C2.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.134-all-waters-flows-into-rivers.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.183-headq-capital-not-member-filter-not-exists.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.174-neighbor-symmetric.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.133-all-waters-flows-into-all-waters.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.114a-country-hasCity-city.qpair",
+    "precision": 1.0,
+    "recall": 0.9777777777777777,
+    "f1": 0.9887640449438202
+  },
+  {
+    "id": "mondial_rel.114b-city-cityIn-country.qpair",
+    "precision": 1.0,
+    "recall": 0.9777777777777777,
+    "f1": 0.9887640449438202
+  },
+  {
+    "id": "mondial_rel.122b-mvd-locatedonisland-cities-elev-maybe-null.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.002-simple-city-count.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.124b-mvd-locatedonisland-cities+mountains-elevation-maybe-null.qpair",
+    "precision": 1.0,
+    "recall": 0.6495049504950495,
+    "f1": 0.7875150060024009
+  },
+  {
+    "id": "mondial_rel.115a-mvd-ref-located-cities-same-river-diff-country.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.173-Border-Countries_C1-B_C2-B.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.116-city-isCapitalOf.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.182-cyclic-headq-capital-member.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.153a-cities-onisland-atwater-fully-opt.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.112-functional-ref-country-capital-pops.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.153b-cities-onisland-atwater-fully-opt.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.141-europ-countries-names-via-reified-view.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.151b-cities-onisland-atwater-non-opt.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.126-volcanoes.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.181-view-ismember.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.172-Border-Countries_B-C1C2.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "mondial_rel.152b-cities-onisland-opt-atwater.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "mondial_rel.151a-cities-onisland-atwater-non-opt.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  }
+]

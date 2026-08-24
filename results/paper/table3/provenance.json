@@ -1,0 +1,14 @@
+{
+  "table": 3,
+  "title": "Impact of multi-agent collaboration",
+  "scope": "reported summary",
+  "warning": "This compact release does not claim a single coherent raw run bundle for every ablation row.",
+  "rows": {
+    "Full MA4ROM": "derived from the canonical Table 2 scenario results",
+    "ReAct single-agent": "the reported row combines two audited run namespaces with different source fingerprints",
+    "w/o Pattern Recognition Agent": "reported paper value; original evaluation directories were not found",
+    "w/o Class and DP Mapping Agent": "raw results existed in the private archive but are omitted from this minimal release",
+    "w/o Object Property Mapping Agent": "reported paper value; original evaluation directories were not found"
+  }
+}
+

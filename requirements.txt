@@ -1,0 +1,7 @@
+# Versions used by the audited public source snapshot.
+httpx==0.28.1
+langgraph==0.6.2
+openai==1.98.0
+psycopg2-binary==2.9.11
+rdflib==7.3.0
+

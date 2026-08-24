@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use MA4ROM, please cite the accompanying paper."
+title: "MA4ROM: A Multi-Agent Framework for Relational-to-Ontology Mapping"
+type: software
+version: 1.0.0
+date-released: 2026-08-24
+repository-code: "https://github.com/douerlucky/MA4ROM"
+authors:
+  - family-names: Xue
+    given-names: Feiyang
+  - family-names: Zhou
+    given-names: Xiaoyan
+  - family-names: Xiong
+    given-names: Kai
+  - family-names: Feng
+    given-names: Zaiwen
+  - family-names: Wang
+    given-names: Ying
+

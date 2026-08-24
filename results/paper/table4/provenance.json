@@ -1,0 +1,8 @@
+{
+  "table": 4,
+  "title": "Impact of context retrieval",
+  "scope": "reported summary only",
+  "warning": "The retained private artefacts do not support each row as one internally coherent run.",
+  "details": "For the full and all-context rows, the reported API/token/runtime counters and the reported F1 were found in different historical output directories. The raw directories were therefore not packaged or represented as coherent run evidence."
+}
+

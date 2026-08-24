@@ -1,0 +1,5 @@
+method,f1,api_calls,input_tokens,runtime_seconds,evidence_status
+Full Class and Datatype Property Mapping,0.8966,113,484911,1899.49,reported_cross_run_provenance_gap
+w/o Context Retrieval,0.5862,104,405877,1846.87,reported_only
+w/o Confidence-based Retrieval,0.8966,146,510837,1947.57,reported_cross_run_provenance_gap
+

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "cmt_denormalized.Q48.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q14.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q32.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q36.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q12.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q34.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q09.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q11.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q08.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q35.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q06.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q43.qpair",
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q04.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q41.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q20.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q02.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q26.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q40.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q23.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q42.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q07.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q46.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q03.qpair",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0
+  },
+  {
+    "id": "cmt_denormalized.Q25.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  {
+    "id": "cmt_denormalized.Q01.qpair",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  }
+]

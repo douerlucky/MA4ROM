@@ -1,0 +1,556 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix conferencerenamed-100: <http://conference#> .
+@base <http://example.com/> .
+
+# === abstracts (SH) ===
+<#abstractsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"th_part\" FROM \"abstracts\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Abstract ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_the_1th_part_of ;
+        rr:objectMap [ rr:template "http://example.com/conference_documents/{th_part}" ]
+    ] .
+
+# === accepted_contributions (SH) ===
+<#accepted_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"accepted_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Accepted_contribution ] .
+
+# === camera_ready_contributions (SH) ===
+<#camera_ready_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"camera_ready_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Camera_ready_contribution ] .
+
+# === chairs (SH) ===
+<#chairsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"chairs\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Chair ] .
+
+# === committee_members (SH) ===
+<#committee_membersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"committee_members\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Committee_member ] .
+
+# === conference_contributions (SH) ===
+<#conference_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"submitted_at\" FROM \"conference_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Conference_contribution ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_submitted_at ;
+        rr:objectMap [ rr:template "http://example.com/conferences/{submitted_at}" ]
+    ] .
+
+# === conference_contributors (SH) ===
+<#conference_contributorsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"conference_contributors\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Conference_contributor ] .
+
+# === conference_participants (SH) ===
+<#conference_participantsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"conference_participants\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Conference_participant ] .
+
+# === conference_volumes (SH) ===
+<#conference_volumesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"program_committee\" , \"organizing_committ\" , \"location\" , \"steering_committee\" , \"important_dates\" FROM \"conference_volumes\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conferences/{id}" ; rr:class conferencerenamed-100:Conference_volume ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_program_committee ;
+        rr:objectMap [ rr:template "http://example.com/committees/{program_committee}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_location ;
+        rr:objectMap [ rr:column "organizing_committ" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_location ;
+        rr:objectMap [ rr:column "location" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_steering_committee ;
+        rr:objectMap [ rr:template "http://example.com/steering_committees/{steering_committee}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_important_dates ;
+        rr:objectMap [ rr:template "http://example.com/important_dates/{important_dates}" ]
+    ] .
+
+# === contribution_1th_authors (SH) ===
+<#contribution_1th_authorsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"contribution_1th_authors\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class <http://conference#Contribution_1th-author> ] .
+
+# === contribution_co_authors (SH) ===
+<#contribution_co_authorsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"contribution_co_authors\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class <http://conference#Contribution_co-author> ] .
+
+# === early_paid_applicants (SH) ===
+<#early_paid_applicantsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"early_paid_applicants\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/paid_applicants/{id}" ; rr:class conferencerenamed-100:Early_paid_applicant ] .
+
+# === extended_abstracts (SH) ===
+<#extended_abstractsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"text\" FROM \"extended_abstracts\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Extended_abstract ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_text ;
+        rr:objectMap [ rr:column "text" ; rr:datatype xsd:string ]
+    ] .
+
+# === information_for_participas (SH) ===
+<#information_for_participasMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"information_for_participas\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Information_for_participants ] .
+
+# === invited_speakers (SH) ===
+<#invited_speakersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"invited_speakers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/invited_speakers/{id}" ; rr:class conferencerenamed-100:Invited_speaker ] .
+
+# === invited_talks (SH) ===
+<#invited_talksMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"invited_talks\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/invited_talks/{id}" ; rr:class conferencerenamed-100:Invited_talk ] .
+
+# === late_paid_applicants (SH) ===
+<#late_paid_applicantsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"late_paid_applicants\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/paid_applicants/{id}" ; rr:class conferencerenamed-100:Late_paid_applicant ] .
+
+# === papers (SH) ===
+<#papersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"abstract\" , \"paper_title\" FROM \"papers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Paper ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_an_abstract ;
+        rr:objectMap [ rr:template "http://example.com/conference_documents/{abstract}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_paper_title ;
+        rr:objectMap [ rr:column "paper_title" ; rr:datatype xsd:string ]
+    ] .
+
+# === program_committees (SH) ===
+<#program_committeesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"was_program_committee\" FROM \"program_committees\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/committees/{id}" ; rr:class conferencerenamed-100:Program_committee ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:was_a_program_committee_of ;
+        rr:objectMap [ rr:template "http://example.com/conferences/{was_program_committee}" ]
+    ] .
+
+# === registeered_applicants (SH) ===
+<#registeered_applicantsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"registeered_applicants\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_applicants/{id}" ; rr:class conferencerenamed-100:Registeered_applicant ] .
+
+# === regular_authors (SH) ===
+<#regular_authorsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"regular_authors\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Regular_author ] .
+
+# === regular_contributions (SH) ===
+<#regular_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"regular_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Regular_contribution ] .
+
+# === rejected_contributions (SH) ===
+<#rejected_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"rejected_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Rejected_contribution ] .
+
+# === reviewed_contributions (SH) ===
+<#reviewed_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"reviewed_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Reviewed_contribution ] .
+
+# === reviewers (SH) ===
+<#reviewersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"reviewers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Reviewer ] .
+
+# === reviews (SH) ===
+<#reviewsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"reviews\" , \"detailed_comments\" FROM \"reviews\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Review ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:reviews ;
+        rr:objectMap [ rr:template "http://example.com/conference_documents/{reviews}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_detailed_comments ;
+        rr:objectMap [ rr:column "detailed_comments" ; rr:datatype xsd:string ]
+    ] .
+
+# === submitted_contributions (SH) ===
+<#submitted_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"submitted_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Submitted_contribution ] .
+
+# === written_contributions (SH) ===
+<#written_contributionsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"written_contributions\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Written_contribution ] .
+
+# === belongs_to_reviewers (SR) ===
+<#belongs_to_reviewersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"entity\" , \"reviewer\" FROM \"belongs_to_reviewers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{entity}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_review ;
+        rr:objectMap [ rr:template "http://example.com/persons/{reviewer}" ]
+    ] .
+
+# === committee_co_chair (SR) ===
+<#committee_co_chairMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"committee\" , \"co_chair\" FROM \"committee_co_chair\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/committees/{committee}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate <http://conference#has_a_committee_co-chair> ;
+        rr:objectMap [ rr:template "http://example.com/co_chairs/{co_chair}" ]
+    ] .
+
+# === committee_committee_member (SR) ===
+<#committee_committee_memberMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"committee\" , \"committee_member\" FROM \"committee_committee_member\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/committees/{committee}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_members ;
+        rr:objectMap [ rr:template "http://example.com/persons/{committee_member}" ]
+    ] .
+
+# === person_conference_document (SR) ===
+<#person_conference_documentMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"pid\" , \"cid\" FROM \"person_conference_document\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{pid}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:contributes ;
+        rr:objectMap [ rr:template "http://example.com/conference_documents/{cid}" ]
+    ] .
+
+# === reviewer_reviewer (SR) ===
+<#reviewer_reviewerMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"reviewer1\" , \"reviewer2\" FROM \"reviewer_reviewer\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{reviewer1}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate <http://conference#invites_co-reviewers> ;
+        rr:objectMap [ rr:template "http://example.com/persons/{reviewer2}" ]
+    ] .
+
+# === topic_tutorial (SR) ===
+<#topic_tutorialMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"conference_part\" , \"topic\" FROM \"topic_tutorial\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_parts/{conference_part}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate <http://conference#has_a_track-workshop-tutorial_topic> ;
+        rr:objectMap [ rr:template "http://example.com/topics/{topic}" ]
+    ] .
+
+# === active_conference_particis (SE) ===
+<#active_conference_particisMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"active_conference_particis\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/active_conference_particis/{id}" ; rr:class conferencerenamed-100:Active_conference_participant ] .
+
+# === call_for_papers (SE) ===
+<#call_for_papersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"call_for_papers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/call_for_papers/{id}" ; rr:class conferencerenamed-100:Call_for_paper ] .
+
+# === call_for_participations (SE) ===
+<#call_for_participationsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"call_for_participations\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/call_for_participations/{id}" ; rr:class conferencerenamed-100:Call_for_participation ] .
+
+# === co_chairs (SE) ===
+<#co_chairsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"co_chairs\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/co_chairs/{id}" ; rr:class <http://conference#Co-chair> ] .
+
+# === committees (SE) ===
+<#committeesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"name\" , \"committee_chair\" FROM \"committees\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/committees/{id}" ; rr:class conferencerenamed-100:Committee ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === conference_announcements (SE) ===
+<#conference_announcementsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"conference_announcements\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_announcements/{id}" ; rr:class conferencerenamed-100:Conference_announcement ] .
+
+# === conference_applicants (SE) ===
+<#conference_applicantsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"conference_applicants\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_applicants/{id}" ; rr:class conferencerenamed-100:Conference_applicant ] .
+
+# === conference_documents (SE) ===
+<#conference_documentsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"date_issue\" FROM \"conference_documents\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_documents/{id}" ; rr:class conferencerenamed-100:Conference_document ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_date_of_issue ;
+        rr:objectMap [ rr:column "date_issue" ; rr:datatype xsd:date ]
+    ] .
+
+# === conference_fees (SE) ===
+<#conference_feesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"amount\" FROM \"conference_fees\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_fees/{id}" ; rr:class conferencerenamed-100:Conference_fees ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:amount ;
+        rr:objectMap [ rr:column "amount" ; rr:datatype xsd:string ]
+    ] .
+
+# === conference_parts (SE) ===
+<#conference_partsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"part_conference_vol\" , \"name\" FROM \"conference_parts\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_parts/{id}" ; rr:class conferencerenamed-100:Conference_part ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_part_of_conference_volumes ;
+        rr:objectMap [ rr:template "http://example.com/conferences/{part_conference_vol}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === conference_proceedings (SE) ===
+<#conference_proceedingsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"publisher\" , \"volume\" , \"name\" , \"isbn\" FROM \"conference_proceedings\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference_proceedings/{id}" ; rr:class conferencerenamed-100:Conference_proceedings ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_volume ;
+        rr:objectMap [ rr:column "publisher" ; rr:datatype xsd:int ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_volume ;
+        rr:objectMap [ rr:column "volume" ; rr:datatype xsd:int ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_an_ISBN ;
+        rr:objectMap [ rr:column "isbn" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_an_isbn ;
+        rr:objectMap [ rr:column "isbn" ; rr:datatype xsd:string ]
+    ] .
+
+# === conferences (SE) ===
+<#conferencesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"name\" FROM \"conferences\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conferences/{id}" ; rr:class conferencerenamed-100:Conference ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === emails (SE) ===
+<#emailsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"person\" , \"value\" FROM \"emails\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{person}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_an_email ;
+        rr:objectMap [ rr:column "value" ; rr:datatype xsd:string ]
+    ] .
+
+# === important_dates (SE) ===
+<#important_datesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"date_acceptance_a\" , \"full_paper_submissio\" , \"date_camera_ready\" , \"ending_date\" , \"starting_date\" , \"abstract_submission\" FROM \"important_dates\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/important_dates/{id}" ; rr:class conferencerenamed-100:Important_dates ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_a_date_of_acceptance_announcement ;
+        rr:objectMap [ rr:column "date_acceptance_a" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_a_full_paper_submission_date ;
+        rr:objectMap [ rr:column "full_paper_submissio" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_a_date_of_camera_ready_paper_submission ;
+        rr:objectMap [ rr:column "date_camera_ready" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_an_ending_date ;
+        rr:objectMap [ rr:column "ending_date" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_a_starting_date ;
+        rr:objectMap [ rr:column "starting_date" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:is_an_abstract_submission_date ;
+        rr:objectMap [ rr:column "abstract_submission" ; rr:datatype xsd:date ]
+    ] .
+
+# === organizations (SE) ===
+<#organizationsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"name\" FROM \"organizations\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/organizations/{id}" ; rr:class conferencerenamed-100:Organization ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === organizers (SE) ===
+<#organizersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"organizers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/organizers/{id}" ; rr:class conferencerenamed-100:Organizer ] .
+
+# === organizing_committees (SE) ===
+<#organizing_committeesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"was_an_organizing_committ\" FROM \"organizing_committees\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/organizing_committees/{id}" ; rr:class conferencerenamed-100:Organizing_committee ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:was_an_organizing_committee_of ;
+        rr:objectMap [ rr:template "http://example.com/conferences/{was_an_organizing_committ}" ]
+    ] .
+
+# === paid_applicants (SE) ===
+<#paid_applicantsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"paid_applicants\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/paid_applicants/{id}" ; rr:class conferencerenamed-100:Paid_applicant ] .
+
+# === passive_conference_partics (SE) ===
+<#passive_conference_particsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"passive_conference_partics\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/passive_conference_partics/{id}" ; rr:class conferencerenamed-100:Passive_conference_participant ] .
+
+# === persons (SE) ===
+<#personsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"first_name\" , \"last_name\" , \"gender\" FROM \"persons\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/persons/{id}" ; rr:class conferencerenamed-100:Person ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_the_first_name ;
+        rr:objectMap [ rr:column "first_name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_the_last_name ;
+        rr:objectMap [ rr:column "last_name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_gender ;
+        rr:objectMap [ rr:column "gender" ; rr:datatype xsd:string ]
+    ] .
+
+# === posters (SE) ===
+<#postersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"abstract\" FROM \"posters\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/posters/{id}" ; rr:class conferencerenamed-100:Poster ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_an_abstract ;
+        rr:objectMap [ rr:template "http://example.com/conference_documents/{abstract}" ]
+    ] .
+
+# === presentations (SE) ===
+<#presentationsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"given\" , \"abstract\" FROM \"presentations\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/presentations/{id}" ; rr:class conferencerenamed-100:Presentation ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_an_abstract ;
+        rr:objectMap [ rr:template "http://example.com/conference_documents/{abstract}" ]
+    ] .
+
+# === publishers (SE) ===
+<#publishersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"name\" FROM \"publishers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/publishers/{id}" ; rr:class conferencerenamed-100:Publisher ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === review_expertises (SE) ===
+<#review_expertisesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"expertise\" , \"submitted_contribut\" FROM \"review_expertises\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/review_expertises/{id}" ; rr:class conferencerenamed-100:Review_expertise ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_an_expertise ;
+        rr:objectMap [ rr:column "expertise" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_submitted_contribution ;
+        rr:objectMap [ rr:template "http://example.com/conference_documents/{submitted_contribut}" ]
+    ] .
+
+# === review_preferences (SE) ===
+<#review_preferencesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"belongs_to_review_refer\" , \"degree\" , \"topic_or_submissi\" FROM \"review_preferences\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/review_preferences/{id}" ; rr:class conferencerenamed-100:Review_preference ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:belongs_to_a_review_reference ;
+        rr:objectMap [ rr:template "http://example.com/persons/{belongs_to_review_refer}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_degree ;
+        rr:objectMap [ rr:column "degree" ; rr:datatype xsd:int ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_degree ;
+        rr:objectMap [ rr:column "topic_or_submissi" ; rr:datatype xsd:int ]
+    ] .
+
+# === steering_committees (SE) ===
+<#steering_committeesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"was_steering_committee_\" FROM \"steering_committees\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/steering_committees/{id}" ; rr:class conferencerenamed-100:Steering_committee ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:was_a_steering_committee_of ;
+        rr:objectMap [ rr:template "http://example.com/conferences/{was_steering_committee_}" ]
+    ] .
+
+# === topics (SE) ===
+<#topicsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"name\" FROM \"topics\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/topics/{id}" ; rr:class conferencerenamed-100:Topic ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] .
+
+# === track_workshop_chairs (SE) ===
+<#track_workshop_chairsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" FROM \"track_workshop_chairs\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/track_workshop_chairs/{id}" ; rr:class <http://conference#Track-workshop_chair> ] .
+
+# === tracks (SE) ===
+<#tracksMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"tracks\" , \"track_workshop_tuto\" FROM \"tracks\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/tracks/{id}" ; rr:class conferencerenamed-100:Track ] ;
+    rr:predicateObjectMap [
+        rr:predicate <http://conference#has_a_track-workshop-tutorial_chair> ;
+        rr:objectMap [ rr:template "http://example.com/track_workshop_chairs/{track_workshop_tuto}" ]
+    ] .
+
+# === tutorials (SE) ===
+<#tutorialsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"tutorials\" FROM \"tutorials\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/tutorials/{id}" ; rr:class conferencerenamed-100:Tutorial ] .
+
+# === websites (SE) ===
+<#websitesMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"url\" FROM \"websites\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/websites/{id}" ; rr:class conferencerenamed-100:Review ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_URL ;
+        rr:objectMap [ rr:column "url" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate conferencerenamed-100:has_a_url ;
+        rr:objectMap [ rr:column "url" ; rr:datatype xsd:string ]
+    ] .
+
+# === workshops (SE) ===
+<#workshopsMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"id\" , \"track_workshop_tuto\" , \"workshops\" FROM \"workshops\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/workshops/{id}" ; rr:class conferencerenamed-100:Workshop ] .

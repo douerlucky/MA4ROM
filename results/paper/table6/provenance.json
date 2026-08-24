@@ -1,0 +1,17 @@
+{
+  "table": 6,
+  "title": "Robustness after FK removal and declared-FK recovery",
+  "fk_removal": {
+    "source_snapshot": "36382fe941480958f4186543998fc195f39f4862",
+    "evidence": "canonical final mapping, generated ontology, aggregate F1, and compact per-query metrics",
+    "datasets": 10
+  },
+  "fk_recovery": {
+    "experiment": "declared_fk_recovery_by_full_completion_chain",
+    "model": "deepseek-v4-flash",
+    "successful_databases": 10,
+    "failed_databases": 0,
+    "note": "Three databases were rerun after first-pass connection failures; the published compact summary uses the refreshed per-database records."
+  }
+}
+

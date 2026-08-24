@@ -1,0 +1,5 @@
+method,rename,restructured,mixed,nofk,denormalized,average,evidence_status
+Full Object Property Mapping,0.9367,0.8924,0.9649,0.8462,0.7734,0.8827,derived_from_canonical_table2
+w/o IND Completion,0.9426,0.8523,0.8269,0.5714,0.4800,0.7346,reported_only_raw_missing
+w/o Logic Rules Candidate Retrieval,0.8515,0.8164,0.5166,0.6923,0.5600,0.6874,reported_only_raw_missing
+

@@ -1,0 +1,7 @@
+method,rename,restructured,mixed,nofk,denormalized,average,evidence_status
+Full MA4ROM,0.9367,0.8924,0.9649,0.8462,0.7734,0.8827,derived_from_canonical_table2
+ReAct single-agent,0.9282,0.6288,0.7122,0.6347,0.5467,0.6901,reported_composite_runs
+w/o Pattern Recognition Agent,0.4526,0.5821,0.5858,0.6410,0.4800,0.5483,reported_only_raw_missing
+w/o Class and DP Mapping Agent,0.2782,0.2323,0.2759,0.1795,0.3600,0.2652,raw_available_not_packaged
+w/o Object Property Mapping Agent,0.7985,0.7278,0.7580,0.6154,0.4800,0.6759,reported_only_raw_missing
+

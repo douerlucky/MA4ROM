@@ -1,0 +1,385 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cmtdenormalized-100: <http://cmt#> .
+@base <http://example.com/> .
+
+# === Author (SH) ===
+<#AuthorMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"TYPE\" FROM \"Author\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ] .
+
+# === Paper (SH) ===
+<#PaperMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"paperID\" , \"rejectedBy\" , \"readByMeta-Reviewer\" , \"hasAuthor\" , \"title\" , \"hasDecision\" , \"acceptedBy\" , \"TYPE\" , \"Reviewer\" FROM \"Paper\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/document/{ID}" ; rr:class cmtdenormalized-100:Paper ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:paperID ;
+        rr:objectMap [ rr:column "paperID" ; rr:datatype xsd:unsignedLong ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:paperid ;
+        rr:objectMap [ rr:column "paperID" ; rr:datatype xsd:unsignedLong ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:rejectedBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{rejectedBy}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate <http://cmt#readByMeta-Reviewer> ;
+        rr:objectMap [ rr:template "http://example.com/person/{readByMeta-Reviewer}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hasAuthor ;
+        rr:objectMap [ rr:template "http://example.com/person/{hasAuthor}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:title ;
+        rr:objectMap [ rr:column "title" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hasDecision ;
+        rr:objectMap [ rr:template "http://example.com/rejection/{hasDecision}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:acceptedBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{acceptedBy}" ]
+    ] .
+
+# === ProgramCommitteeChair (SH) ===
+<#ProgramCommitteeChairMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"ProgramCommitteeChair\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ; rr:class cmtdenormalized-100:ProgramCommitteeChair ] .
+
+# === ProgramCommitteeMember (SH) ===
+<#ProgramCommitteeMemberMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"maxPapers\" , \"addedBy\" FROM \"ProgramCommitteeMember\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ; rr:class cmtdenormalized-100:ProgramCommitteeMember ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:maxPapers ;
+        rr:objectMap [ rr:column "maxPapers" ; rr:datatype xsd:int ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:maxpapers ;
+        rr:objectMap [ rr:column "maxPapers" ; rr:datatype xsd:int ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:addedBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{addedBy}" ]
+    ] .
+
+# === User (SH) ===
+<#UserMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"acceptPaper\" , \"TYPE\" FROM \"User\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ] .
+
+# === assignReviewer (SR) ===
+<#assignReviewerMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Administrator\" , \"Reviewer\" FROM \"assignReviewer\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{Administrator}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:assignReviewer ;
+        rr:objectMap [ rr:template "http://example.com/reviewer/{Reviewer}" ]
+    ] .
+
+# === co-writePaper (SR) ===
+<#co-writePaperMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Co-author\" , \"Paper\" FROM \"co-writePaper\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{Co-author}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate <http://cmt#co-writePaper> ;
+        rr:objectMap [ rr:template "http://example.com/document/{Paper}" ]
+    ] .
+
+# === detailsEnteredBy (SR) ===
+<#detailsEnteredByMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"Administrator\" FROM \"detailsEnteredBy\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:detailsEnteredBy ;
+        rr:objectMap [ rr:template "http://example.com/administrator/{Administrator}" ]
+    ] .
+
+# === enableVirtualMeeting (SR) ===
+<#enableVirtualMeetingMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"Administrator\" FROM \"enableVirtualMeeting\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:virtualMeetingEnabledBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{Administrator}" ]
+    ] .
+
+# === endReview (SR) ===
+<#endReviewMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ProgramCommitteeChair\" , \"Review\" FROM \"endReview\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ProgramCommitteeChair}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:endReview ;
+        rr:objectMap [ rr:template "http://example.com/review/{Review}" ]
+    ] .
+
+# === enterReviewCriteria (SR) ===
+<#enterReviewCriteriaMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"Administrator\" FROM \"enterReviewCriteria\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:reviewCriteriaEnteredBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{Administrator}" ]
+    ] .
+
+# === finalizePaperAssignment (SR) ===
+<#finalizePaperAssignmentMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"Administrator\" FROM \"finalizePaperAssignment\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:paperAssignmentFinalizedBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{Administrator}" ]
+    ] .
+
+# === hardcopyMailingManifestsP (SR) ===
+<#hardcopyMailingManifestsPMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"Administrator\" FROM \"hardcopyMailingManifestsP\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hardcopyMailingManifestsPrintedBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{Administrator}" ]
+    ] .
+
+# === hasConferenceMember (SR) ===
+<#hasConferenceMemberMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"ConferenceMember\" FROM \"hasConferenceMember\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hasConferenceMember ;
+        rr:objectMap [ rr:template "http://example.com/person/{ConferenceMember}" ]
+    ] .
+
+# === hasConflictOfInterest (SR) ===
+<#hasConflictOfInterestMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Person\" , \"Document\" FROM \"hasConflictOfInterest\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{Person}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hasConflictOfInterest ;
+        rr:objectMap [ rr:template "http://example.com/document/{Document}" ]
+    ] .
+
+# === hasProgramCommitteeMember (SR) ===
+<#hasProgramCommitteeMemberMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ProgramCommittee\" , \"ProgramCommitteeMember\" FROM \"hasProgramCommitteeMember\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/programcommittee/{ProgramCommittee}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hasProgramCommitteeMember ;
+        rr:objectMap [ rr:template "http://example.com/person/{ProgramCommitteeMember}" ]
+    ] .
+
+# === hasSubjectArea (SR) ===
+<#hasSubjectAreaMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"SubjectArea\" , \"Paper\" FROM \"hasSubjectArea\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/subjectarea/{SubjectArea}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hasSubjectArea ;
+        rr:objectMap [ rr:template "http://example.com/subjectarea/{Paper}" ]
+    ] .
+
+# === paperAssignmentToolsRunBy (SR) ===
+<#paperAssignmentToolsRunByMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"Administrator\" FROM \"paperAssignmentToolsRunBy\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:paperAssignmentToolsRunBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{Administrator}" ]
+    ] .
+
+# === reviewerBiddingStartedBy (SR) ===
+<#reviewerBiddingStartedByMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Conference\" , \"Administrator\" FROM \"reviewerBiddingStartedBy\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{Conference}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:reviewerBiddingStartedBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{Administrator}" ]
+    ] .
+
+# === setMaxPapers (SR) ===
+<#setMaxPapersMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ProgramCommitteeMember\" , \"Administrator\" FROM \"setMaxPapers\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ProgramCommitteeMember}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:setMaxPapers ;
+        rr:objectMap [ rr:template "http://example.com/person/{Administrator}" ]
+    ] .
+
+# === submitPaper (SR) ===
+<#submitPaperMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"Author\" , \"Paper\" FROM \"submitPaper\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{Author}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:submitPaper ;
+        rr:objectMap [ rr:template "http://example.com/document/{Paper}" ]
+    ] .
+
+# === Bid (SE) ===
+<#BidMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"adjustedBy\" , \"hasBid_Inv\" FROM \"Bid\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/bid/{ID}" ; rr:class cmtdenormalized-100:Bid ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:adjustedBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{adjustedBy}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:hasBid ;
+        rr:objectMap [ rr:template "http://example.com/document/{hasBid_Inv}" ]
+    ] .
+
+# === Conference (SE) ===
+<#ConferenceMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"siteURL\" , \"acceptsHardcopySubmissions\" , \"logoURL\" , \"date\" , \"name\" , \"reviewsPerPaper\" FROM \"Conference\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/conference/{ID}" ; rr:class cmtdenormalized-100:Conference ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:siteURL ;
+        rr:objectMap [ rr:column "siteURL" ; rr:datatype xsd:anyURI ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:siteurl ;
+        rr:objectMap [ rr:column "siteURL" ; rr:datatype xsd:anyURI ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:logoURL ;
+        rr:objectMap [ rr:column "logoURL" ; rr:datatype xsd:anyURI ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:logourl ;
+        rr:objectMap [ rr:column "logoURL" ; rr:datatype xsd:anyURI ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:date ;
+        rr:objectMap [ rr:column "date" ; rr:datatype xsd:date ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:reviewsPerPaper ;
+        rr:objectMap [ rr:column "reviewsPerPaper" ; rr:datatype xsd:int ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:reviewsperpaper ;
+        rr:objectMap [ rr:column "reviewsPerPaper" ; rr:datatype xsd:int ]
+    ] .
+
+# === Document (SE) ===
+<#DocumentMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"writtenBy\" , \"TYPE\" FROM \"Document\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/document/{ID}" ; rr:class cmtdenormalized-100:Document ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:writtenBy ;
+        rr:objectMap [ rr:template "http://example.com/person/{writtenBy}" ]
+    ] .
+
+# === Person (SE) ===
+<#PersonMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" , \"name\" , \"email\" , \"assignedByReviewer\" , \"TYPE\" FROM \"Person\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ; rr:class cmtdenormalized-100:Person ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:name ;
+        rr:objectMap [ rr:column "name" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:email ;
+        rr:objectMap [ rr:column "email" ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:assignedByReviewer ;
+        rr:objectMap [ rr:template "http://example.com/person/{assignedByReviewer}" ]
+    ] .
+
+# === Preference (SE) ===
+<#PreferenceMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Preference\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/preference/{ID}" ; rr:class cmtdenormalized-100:Preference ] .
+
+# === ProgramCommittee (SE) ===
+<#ProgramCommitteeMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"ProgramCommittee\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/programcommittee/{ID}" ; rr:class cmtdenormalized-100:ProgramCommittee ] .
+
+# === Rejection (SE) ===
+<#RejectionMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Rejection\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/rejection/{ID}" ; rr:class cmtdenormalized-100:Rejection ] .
+
+# === SubjectArea (SE) ===
+<#SubjectAreaMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"SubjectArea\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/subjectarea/{ID}" ; rr:class cmtdenormalized-100:SubjectArea ] .
+
+# === markConflictOfInterest (SE) ===
+<#markConflictOfInterestMapping> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ConferenceMember\" , \"Paper\" FROM \"markConflictOfInterest\"" ] ;
+    rr:subjectMap [ rr:template "http://example.com/markconflictofinterest/{ConferenceMember}__{Paper}" ; rr:class cmtdenormalized-100:ProgramCommitteeChair ] ;
+    rr:predicateObjectMap [
+        rr:predicate cmtdenormalized-100:maxPapers ;
+        rr:objectMap [ rr:column "Paper" ; rr:datatype xsd:int ]
+    ] .
+
+# === Author (Type Assertions) ===
+<#Author_TYPE_0_Co_author_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Author\" WHERE \"TYPE\" = 0" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant <http://cmt#Co-author> ]
+    ] .
+
+<#Author_TYPE_2_Co_author_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Author\" WHERE \"TYPE\" = 2" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant <http://cmt#Co-author> ]
+    ] .
+
+# === Document (Type Assertions) ===
+<#Document_TYPE_0_Paper_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Document\" WHERE \"TYPE\" = 0" ] ;
+    rr:subjectMap [ rr:template "http://example.com/document/{ID}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant cmtdenormalized-100:Paper ]
+    ] .
+
+<#Document_TYPE_1_Review_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Document\" WHERE \"TYPE\" = 1" ] ;
+    rr:subjectMap [ rr:template "http://example.com/document/{ID}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant cmtdenormalized-100:Review ]
+    ] .
+
+# === Paper (Type Assertions) ===
+<#Paper_TYPE_2_Paper_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Paper\" WHERE \"TYPE\" = 2" ] ;
+    rr:subjectMap [ rr:template "http://example.com/document/{ID}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant cmtdenormalized-100:Paper ]
+    ] .
+
+# === Person (Type Assertions) ===
+<#Person_TYPE_2_Reviewer_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"Person\" WHERE \"TYPE\" = 2" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant cmtdenormalized-100:Reviewer ]
+    ] .
+
+# === User (Type Assertions) ===
+<#User_TYPE_0_Author_Type> a rr:TriplesMap ;
+    rr:logicalTable [ rr:sqlQuery "SELECT \"ID\" FROM \"User\" WHERE \"TYPE\" = 0" ] ;
+    rr:subjectMap [ rr:template "http://example.com/person/{ID}" ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant cmtdenormalized-100:Author ]
+    ] .

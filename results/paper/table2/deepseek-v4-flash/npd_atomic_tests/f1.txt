@@ -1,0 +1,3 @@
+Average Precision: 0.3599
+Average Recall: 0.4469
+Average F1 Score: 0.3765
