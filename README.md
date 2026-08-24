@@ -1,25 +1,61 @@
 <div align="center">
+  <h1>MA4ROM</h1>
+  <p><strong>A Multi-Agent Framework for Relational-to-Ontology Mapping</strong></p>
 
-# MA4ROM
+  <p>
+    <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/Python-3.10--3.13-3776AB?logo=python&logoColor=white"></a>
+    <a href="https://www.postgresql.org/"><img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-14%2B-4169E1?logo=postgresql&logoColor=white"></a>
+    <img alt="OBDA" src="https://img.shields.io/badge/Paradigm-OBDA-0F766E">
+    <a href="https://www.w3.org/TR/r2rml/"><img alt="R2RML" src="https://img.shields.io/badge/Output-R2RML-7C3AED"></a>
+    <img alt="Artifact" src="https://img.shields.io/badge/Status-Public%20Artifact-2563EB">
+  </p>
 
-**A Multi-Agent Framework for Relational-to-Ontology Mapping**
-
-[![Python](https://img.shields.io/badge/Python-3.10--3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Output](https://img.shields.io/badge/Output-R2RML-7C3AED)](https://www.w3.org/TR/r2rml/)
+  <p>
+    MA4ROM generates executable relational-to-ontology mappings from relational
+    schemas and target ontologies using a coordinated multi-agent pipeline.
+  </p>
 
 </div>
 
-MA4ROM generates executable R2RML mappings from a relational database and a
-target ontology. Four coordinated stages recognize relational mapping
-patterns, align classes and datatype properties, recover object-property
-relations, and construct the final mapping.
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/553991b5-d94f-4136-ab6c-c7b8c1348171"
+    width="1000"
+    alt="MA4ROM multi-agent mapping pipeline"
+  />
+</p>
+
+## Overview
+
+Given a relational database and a target ontology, MA4ROM generates class
+mappings, datatype-property mappings, object-property mappings, and executable
+R2RML mapping documents.
+
+MA4ROM targets three recurring challenges in relational-to-ontology mapping:
+semantic loss in column names, enumerated values that correspond to ontology
+subclasses, and incomplete relationship evidence caused by missing foreign
+keys or opaque relationship-table names. It combines ontology candidate
+ranking, schema and instance-value context, inclusion-dependency discovery,
+and ontology domain/range constraints in a four-stage workflow.
 
 This repository is a compact public release: current source code, 11 complete
 RODI-derived inputs, semantic regression tests, and compact evidence for the
 paper's final experimental tables. Caches, logs, prompts, checkpoints, candidate files, backups,
 failed runs, repair diagnostics, and duplicate outputs are intentionally not
 included.
+
+## Key contributions
+
+- **A coordinated multi-agent framework for R2O mapping generation.** Four
+  specialized stages cover pattern recognition, class and datatype-property
+  alignment, object-property recovery, and executable R2RML generation.
+- **Context retrieval for ambiguous class and datatype-property mappings.**
+  Candidate ranking and confidence estimation determine when schema and
+  instance-value evidence is needed, including enumerated-value subclass
+  mappings.
+- **Ontology- and schema-aware object-property mapping.** IND-based FK
+  discovery, ontology constraints, endpoint compatibility, and relation
+  context support missing FKs and semantically opaque relationship tables.
 
 ## Important result provenance
 
@@ -74,12 +110,54 @@ mixed into the formal result set. Full details are in
 └── third_party/licenses/   # Dataset notices
 ```
 
+## Datasets
+
+The packaged scenarios are derived from the
+[RODI benchmark](https://github.com/chrpin/rodi). Each directory under
+`ma4rom/input/<scenario>/` contains the target ontology, a PostgreSQL dump, and
+the evaluator's query pairs:
+
+```text
+ma4rom/input/<scenario>/
+├── ontology.ttl
+├── dump.sql
+└── queries/*.qpair
+```
+
+| Setting | Packaged scenarios | Purpose |
+|---|---|---|
+| Renamed | CMT, Conference, SIGKDD | Tests semantic loss in schema names. |
+| Restructured | CMT, Conference, SIGKDD | Tests structural changes between the database and ontology. |
+| Mixed | SIGKDD | Combines multiple schema changes. |
+| Missing FKs | Conference | Tests relation recovery without complete physical FKs. |
+| Denormalized | CMT | Tests merged entities and relationships. |
+| Real-world | Mondial, NPD | Tests geographic and petroleum-domain schemas. |
+
+The paper also reports a separate RODI-noFKs robustness experiment in which
+physical FKs are removed before mapping. Its compact final evidence is under
+`results/paper/table6/`; it is not an additional input dataset.
+
 ## Quick start
 
-### 1. Create an environment
+### Prerequisites
+
+| Software | Version | Purpose |
+|---|---:|---|
+| Python | 3.10--3.13 | Mapping pipeline and release checks |
+| PostgreSQL | 14+ | Loading and querying benchmark databases |
+| Git | Recent | Cloning the repository |
+| Java + Ontop | Optional | Recomputing benchmark query answers |
+
+Ontop is not bundled. Download an appropriate release from the
+[official Ontop repository](https://github.com/ontop/ontop/releases) only if
+you want to rerun query evaluation.
+
+### 1. Clone and create an environment
 
 ```bash
-python3.13 -m venv .venv
+git clone https://github.com/douerlucky/MA4ROM.git
+cd MA4ROM
+python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
@@ -169,6 +247,23 @@ repeated-run statistic. The LLM4VKG values are paper-table transcriptions
 because its original raw baseline outputs were absent from the audited local
 checkout; see [`results/README.md`](results/README.md).
 
+## Main experimental settings
+
+The default paper configuration is encoded in `ma4rom/config.py`. The principal
+candidate-ranking and FK-recovery parameters are:
+
+| Parameter | Value | Meaning |
+|---|---:|---|
+| `DP_MAPPING_CANDIDATE_TEXT_WEIGHT` | `0.7` | Lexical component of DP ranking |
+| `DP_MAPPING_CANDIDATE_DOMAIN_WEIGHT` | `0.3` | Domain-compatibility component |
+| `DP_MAPPING_CONF_HIGH_TOP1` | `0.7` | Minimum top-1 score for high confidence |
+| `DP_MAPPING_CONF_HIGH_GAP` | `0.2` | Required top-1/top-2 score gap |
+| `FK_COMPLETION_IND_THRESHOLD` | `0.95` | Inclusion-dependency threshold for FK recovery |
+| LLM temperature | `0` | Generation temperature used by the client |
+
+Runtime model, timeout, fallback, request-budget, and token-budget controls are
+configured through environment variables documented in `.env.example`.
+
 ## Evaluation
 
 The repository packages final mappings, generated ontologies, aggregate scores,
@@ -187,6 +282,16 @@ The input scenarios are derived from RODI. RODI's benchmark framework is MIT
 licensed; NPD data carries separate terms supplied with that scenario. Review
 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and the license copies under
 `third_party/licenses/` before redistribution.
+
+## Example use case
+
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/7883cc53-7ef4-4671-b741-ed416e213af6"
+    width="500"
+    alt="Example relational-to-ontology mapping generated by MA4ROM"
+  />
+</p>
 
 ## Citation
 
